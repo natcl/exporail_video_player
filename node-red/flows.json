@@ -2,7 +2,17 @@
   {
     "type": "tab",
     "id": "e95a1c51.16a5e",
-    "label": "Sheet 1"
+    "label": "Playlist"
+  },
+  {
+    "type": "tab",
+    "id": "cc835082.337cb",
+    "label": "Init"
+  },
+  {
+    "type": "tab",
+    "id": "6231f4d8.9dce0c",
+    "label": "Buttons"
   },
   {
     "id": "f1b08f22.0e4f7",
@@ -15,11 +25,11 @@
     "repeat": "",
     "crontab": "",
     "once": true,
-    "x": 90,
-    "y": 40,
+    "x": 93,
+    "y": 55,
     "wires": [
       [
-        "9bbc01a8.6444"
+        "daca7587.253588"
       ]
     ]
   },
@@ -27,73 +37,17 @@
     "id": "9bbc01a8.6444",
     "type": "exec",
     "z": "e95a1c51.16a5e",
-    "command": "omxplayer -b /mnt/media/video01.mp4",
-    "addpay": false,
+    "command": "omxplayer -b",
+    "addpay": true,
     "append": "",
     "useSpawn": "",
     "name": "",
-    "x": 351,
-    "y": 40,
+    "x": 486,
+    "y": 110,
     "wires": [
       [
         "e23a0377.1dc6"
       ],
-      [],
-      []
-    ]
-  },
-  {
-    "id": "7002382b.8ffdc8",
-    "type": "exec",
-    "z": "e95a1c51.16a5e",
-    "command": "omxplayer -b /mnt/media/video02.mp4",
-    "addpay": false,
-    "append": "",
-    "useSpawn": "",
-    "name": "",
-    "x": 351,
-    "y": 100,
-    "wires": [
-      [
-        "10bc99f4.ef4366"
-      ],
-      [],
-      []
-    ]
-  },
-  {
-    "id": "ba1b735e.45e49",
-    "type": "inject",
-    "z": "e95a1c51.16a5e",
-    "name": "",
-    "topic": "",
-    "payload": "",
-    "payloadType": "none",
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "x": 113,
-    "y": 179,
-    "wires": [
-      [
-        "4f34b72f.b0cb48",
-        "d8184d32.27e7b"
-      ]
-    ]
-  },
-  {
-    "id": "4f34b72f.b0cb48",
-    "type": "exec",
-    "z": "e95a1c51.16a5e",
-    "command": "killall omxplayer.bin",
-    "addpay": false,
-    "append": "",
-    "useSpawn": "",
-    "name": "",
-    "x": 371,
-    "y": 187,
-    "wires": [
-      [],
       [],
       []
     ]
@@ -112,106 +66,25 @@
     "randomLast": "5",
     "randomUnits": "seconds",
     "drop": false,
-    "x": 616.5,
-    "y": 40,
+    "x": 620.5,
+    "y": 173,
     "wires": [
       [
-        "7002382b.8ffdc8"
+        "1e61d873.e19e28"
       ]
     ]
   },
   {
-    "id": "10bc99f4.ef4366",
-    "type": "delay",
-    "z": "e95a1c51.16a5e",
-    "name": "",
-    "pauseType": "delay",
-    "timeout": "500",
-    "timeoutUnits": "milliseconds",
-    "rate": "1",
-    "rateUnits": "second",
-    "randomFirst": "1",
-    "randomLast": "5",
-    "randomUnits": "seconds",
-    "drop": false,
-    "x": 616.5,
-    "y": 100,
-    "wires": [
-      [
-        "9bbc01a8.6444"
-      ]
-    ]
-  },
-  {
-    "id": "2bdb7aec.d42486",
-    "type": "inject",
-    "z": "e95a1c51.16a5e",
-    "name": "",
-    "topic": "",
-    "payload": "",
-    "payloadType": "none",
-    "repeat": "",
-    "crontab": "",
-    "once": false,
-    "x": 90,
-    "y": 100,
-    "wires": [
-      [
-        "7002382b.8ffdc8"
-      ]
-    ]
-  },
-  {
-    "id": "d8184d32.27e7b",
+    "id": "b04599f8.4fba68",
     "type": "exec",
-    "z": "e95a1c51.16a5e",
-    "command": "killall dbus-daemon",
-    "addpay": false,
-    "append": "",
-    "useSpawn": "",
-    "name": "",
-    "x": 375,
-    "y": 243,
-    "wires": [
-      [],
-      [],
-      []
-    ]
-  },
-  {
-    "id": "c40faee0.3bf05",
-    "type": "exec",
-    "z": "e95a1c51.16a5e",
+    "z": "cc835082.337cb",
     "command": "sudo sh -c \"TERM=linux setterm -foreground black -clear all >/dev/tty0\"",
     "addpay": false,
     "append": "",
     "useSpawn": "",
     "name": "",
-    "x": 485,
-    "y": 360,
-    "wires": [
-      [
-        "68c89a42.973764"
-      ],
-      [
-        "68c89a42.973764"
-      ],
-      [
-        "68c89a42.973764"
-      ]
-    ]
-  },
-  {
-    "id": "e6dae46b.192518",
-    "type": "exec",
-    "z": "e95a1c51.16a5e",
-    "command": "sudo sh -c \"TERM=linux setterm -foreground white -clear >/dev/tty0\"",
-    "addpay": false,
-    "append": "",
-    "useSpawn": "",
-    "name": "",
-    "x": 484.5,
-    "y": 420,
+    "x": 474,
+    "y": 116,
     "wires": [
       [],
       [],
@@ -219,9 +92,26 @@
     ]
   },
   {
-    "id": "340eba1.fcbf146",
+    "id": "aa0117b2.55fee8",
+    "type": "exec",
+    "z": "cc835082.337cb",
+    "command": "sudo sh -c \"TERM=linux setterm -foreground white -clear >/dev/tty0\"",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 473.5,
+    "y": 176,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "d1bc2920.2e43d8",
     "type": "inject",
-    "z": "e95a1c51.16a5e",
+    "z": "cc835082.337cb",
     "name": "",
     "topic": "",
     "payload": "",
@@ -229,19 +119,19 @@
     "repeat": "",
     "crontab": "",
     "once": true,
-    "x": 110,
-    "y": 360,
+    "x": 99,
+    "y": 116,
     "wires": [
       [
-        "c40faee0.3bf05",
-        "6bb10d54.944ef4"
+        "b04599f8.4fba68",
+        "baa7d720.455828"
       ]
     ]
   },
   {
-    "id": "db6f3a8.f2490c8",
+    "id": "b4e679fb.4b1988",
     "type": "inject",
-    "z": "e95a1c51.16a5e",
+    "z": "cc835082.337cb",
     "name": "",
     "topic": "",
     "payload": "",
@@ -249,30 +139,18 @@
     "repeat": "",
     "crontab": "",
     "once": false,
-    "x": 110,
-    "y": 420,
+    "x": 99,
+    "y": 176,
     "wires": [
       [
-        "e6dae46b.192518"
+        "aa0117b2.55fee8"
       ]
     ]
   },
   {
-    "id": "68c89a42.973764",
-    "type": "debug",
-    "z": "e95a1c51.16a5e",
-    "name": "",
-    "active": true,
-    "console": "false",
-    "complete": "false",
-    "x": 789,
-    "y": 320,
-    "wires": []
-  },
-  {
-    "id": "6bb10d54.944ef4",
+    "id": "baa7d720.455828",
     "type": "delay",
-    "z": "e95a1c51.16a5e",
+    "z": "cc835082.337cb",
     "name": "",
     "pauseType": "delay",
     "timeout": "10",
@@ -283,12 +161,359 @@
     "randomLast": "5",
     "randomUnits": "seconds",
     "drop": false,
-    "x": 168,
-    "y": 296,
+    "x": 157,
+    "y": 52,
     "wires": [
       [
-        "c40faee0.3bf05"
+        "b04599f8.4fba68"
       ]
+    ]
+  },
+  {
+    "id": "d274b401.2d8b48",
+    "type": "file in",
+    "z": "cc835082.337cb",
+    "name": "",
+    "filename": "/boot/video_config.json",
+    "format": "utf8",
+    "x": 262.5,
+    "y": 260,
+    "wires": [
+      [
+        "81ca7fcf.7e358"
+      ]
+    ]
+  },
+  {
+    "id": "81ca7fcf.7e358",
+    "type": "json",
+    "z": "cc835082.337cb",
+    "name": "",
+    "x": 450,
+    "y": 260,
+    "wires": [
+      [
+        "cdeaab80.321558"
+      ]
+    ]
+  },
+  {
+    "id": "cf62aef4.309d5",
+    "type": "inject",
+    "z": "cc835082.337cb",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "none",
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "x": 90,
+    "y": 260,
+    "wires": [
+      [
+        "d274b401.2d8b48"
+      ]
+    ]
+  },
+  {
+    "id": "cdeaab80.321558",
+    "type": "function",
+    "z": "cc835082.337cb",
+    "name": "set_config",
+    "func": "context.global.loop = true;\ncontext.global.buttonGate = true;\ncontext.global.config = msg.payload;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 581,
+    "y": 260,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "daca7587.253588",
+    "type": "delay",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 227.5,
+    "y": 55,
+    "wires": [
+      [
+        "d5942d77.2a6bd"
+      ]
+    ]
+  },
+  {
+    "id": "d5942d77.2a6bd",
+    "type": "function",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "func": "if (context.global.config.mode == \"playlist\")\n{\n    context.count = context.count || 0;\n    \n    var playlist = context.global.config.playlist;\n    \n    node.status({fill: \"green\", shape: \"dot\", text: playlist[context.count]});\n    \n    msg.payload = \"/mnt/media/\" + playlist[context.count];\n    context.count++;\n    if (context.count >= playlist.length)\n    {\n        context.count = 0;\n    }\n    return msg;\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 326,
+    "y": 110,
+    "wires": [
+      [
+        "9bbc01a8.6444"
+      ]
+    ]
+  },
+  {
+    "id": "1e61d873.e19e28",
+    "type": "function",
+    "z": "e95a1c51.16a5e",
+    "name": "gate",
+    "func": "if (context.global.loop)\n{\n    return msg;\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 770,
+    "y": 173,
+    "wires": [
+      [
+        "d5942d77.2a6bd"
+      ]
+    ]
+  },
+  {
+    "id": "94c69004.6b397",
+    "type": "function",
+    "z": "e95a1c51.16a5e",
+    "name": "set_loop",
+    "func": "context.global.loop = msg.payload;\nif (context.global.loop)\n    node.status({fill: \"green\", shape: \"dot\", text: \"true\"});\nelse\n    node.status({fill: \"red\", shape: \"dot\", text: \"false\"});\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 395,
+    "y": 240,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "e11e966d.1ee168",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "true",
+    "payloadType": "string",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 95,
+    "y": 202,
+    "wires": [
+      [
+        "7411d9ec.8bee28"
+      ]
+    ]
+  },
+  {
+    "id": "c8a67932.375988",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "false",
+    "payloadType": "string",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 96,
+    "y": 241,
+    "wires": [
+      [
+        "7411d9ec.8bee28"
+      ]
+    ]
+  },
+  {
+    "id": "7411d9ec.8bee28",
+    "type": "json",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "x": 264,
+    "y": 240,
+    "wires": [
+      [
+        "94c69004.6b397"
+      ]
+    ]
+  },
+  {
+    "id": "25ea34d0.da15cc",
+    "type": "rpi-gpio in",
+    "z": "6231f4d8.9dce0c",
+    "name": "",
+    "pin": "3",
+    "intype": "up",
+    "read": false,
+    "x": 90,
+    "y": 60,
+    "wires": [
+      [
+        "8c99e1ba.73662"
+      ]
+    ]
+  },
+  {
+    "id": "d5ef112a.2a10f",
+    "type": "rpi-gpio in",
+    "z": "6231f4d8.9dce0c",
+    "name": "",
+    "pin": "5",
+    "intype": "up",
+    "read": false,
+    "x": 90,
+    "y": 100,
+    "wires": [
+      [
+        "8c99e1ba.73662"
+      ]
+    ]
+  },
+  {
+    "id": "4d1aea32.b2e514",
+    "type": "rpi-gpio in",
+    "z": "6231f4d8.9dce0c",
+    "name": "",
+    "pin": "7",
+    "intype": "up",
+    "read": false,
+    "x": 90,
+    "y": 140,
+    "wires": [
+      [
+        "8c99e1ba.73662"
+      ]
+    ]
+  },
+  {
+    "id": "733d4b8f.8cc2b4",
+    "type": "rpi-gpio in",
+    "z": "6231f4d8.9dce0c",
+    "name": "",
+    "pin": "11",
+    "intype": "up",
+    "read": false,
+    "x": 90,
+    "y": 180,
+    "wires": [
+      [
+        "8c99e1ba.73662"
+      ]
+    ]
+  },
+  {
+    "id": "8c99e1ba.73662",
+    "type": "function",
+    "z": "6231f4d8.9dce0c",
+    "name": "",
+    "func": "if (context.global.config.mode == \"buttons\")\n{\n    if (context.global.buttonGate)\n    {\n        context.global.buttonGate = false;\n        if (msg.topic == \"pi/3\")\n            msg.payload = \"/mnt/media/video01.mp4\";\n        if (msg.topic == \"pi/5\")\n            msg.payload = \"/mnt/media/video02.mp4\";\n        if (msg.topic == \"pi/7\")\n            msg.payload = \"/mnt/media/video03.mp4\";\n        if (msg.topic == \"pi/11\")\n            msg.payload = \"/mnt/media/video04.mp4\";\n        node.status({fill: \"green\", shape: \"dot\", text: msg.payload});\n        return msg;\n    }\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 270,
+    "y": 120,
+    "wires": [
+      [
+        "8d78ad64.72875"
+      ]
+    ]
+  },
+  {
+    "id": "bce2c7f6.431d38",
+    "type": "function",
+    "z": "6231f4d8.9dce0c",
+    "name": "resetGate",
+    "func": "context.global.buttonGate = true;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 663,
+    "y": 107,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8d78ad64.72875",
+    "type": "exec",
+    "z": "6231f4d8.9dce0c",
+    "command": "omxplayer -b",
+    "addpay": true,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 470,
+    "y": 120,
+    "wires": [
+      [
+        "bce2c7f6.431d38"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "b068913e.4f977",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "none",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 97,
+    "y": 319,
+    "wires": [
+      [
+        "b29f4856.4d60b8",
+        "1c5692e3.e3a96d"
+      ]
+    ]
+  },
+  {
+    "id": "b29f4856.4d60b8",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "killall omxplayer.bin",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 355,
+    "y": 327,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "1c5692e3.e3a96d",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "killall dbus-daemon",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 359,
+    "y": 383,
+    "wires": [
+      [],
+      [],
+      []
     ]
   }
 ]
