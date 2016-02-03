@@ -1,0 +1,294 @@
+[
+  {
+    "type": "tab",
+    "id": "e95a1c51.16a5e",
+    "label": "Sheet 1"
+  },
+  {
+    "id": "f1b08f22.0e4f7",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "none",
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "x": 90,
+    "y": 40,
+    "wires": [
+      [
+        "9bbc01a8.6444"
+      ]
+    ]
+  },
+  {
+    "id": "9bbc01a8.6444",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "omxplayer -b /mnt/media/video01.mp4",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 351,
+    "y": 40,
+    "wires": [
+      [
+        "e23a0377.1dc6"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "7002382b.8ffdc8",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "omxplayer -b /mnt/media/video02.mp4",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 351,
+    "y": 100,
+    "wires": [
+      [
+        "10bc99f4.ef4366"
+      ],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "ba1b735e.45e49",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "none",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 113,
+    "y": 179,
+    "wires": [
+      [
+        "4f34b72f.b0cb48",
+        "d8184d32.27e7b"
+      ]
+    ]
+  },
+  {
+    "id": "4f34b72f.b0cb48",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "killall omxplayer.bin",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 371,
+    "y": 187,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "e23a0377.1dc6",
+    "type": "delay",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "500",
+    "timeoutUnits": "milliseconds",
+    "rate": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 616.5,
+    "y": 40,
+    "wires": [
+      [
+        "7002382b.8ffdc8"
+      ]
+    ]
+  },
+  {
+    "id": "10bc99f4.ef4366",
+    "type": "delay",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "500",
+    "timeoutUnits": "milliseconds",
+    "rate": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 616.5,
+    "y": 100,
+    "wires": [
+      [
+        "9bbc01a8.6444"
+      ]
+    ]
+  },
+  {
+    "id": "2bdb7aec.d42486",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "none",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 90,
+    "y": 100,
+    "wires": [
+      [
+        "7002382b.8ffdc8"
+      ]
+    ]
+  },
+  {
+    "id": "d8184d32.27e7b",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "killall dbus-daemon",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 375,
+    "y": 243,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "c40faee0.3bf05",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "sudo sh -c \"TERM=linux setterm -foreground black -clear all >/dev/tty0\"",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 485,
+    "y": 360,
+    "wires": [
+      [
+        "68c89a42.973764"
+      ],
+      [
+        "68c89a42.973764"
+      ],
+      [
+        "68c89a42.973764"
+      ]
+    ]
+  },
+  {
+    "id": "e6dae46b.192518",
+    "type": "exec",
+    "z": "e95a1c51.16a5e",
+    "command": "sudo sh -c \"TERM=linux setterm -foreground white -clear >/dev/tty0\"",
+    "addpay": false,
+    "append": "",
+    "useSpawn": "",
+    "name": "",
+    "x": 484.5,
+    "y": 420,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "340eba1.fcbf146",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "none",
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "x": 110,
+    "y": 360,
+    "wires": [
+      [
+        "c40faee0.3bf05",
+        "6bb10d54.944ef4"
+      ]
+    ]
+  },
+  {
+    "id": "db6f3a8.f2490c8",
+    "type": "inject",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "none",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 110,
+    "y": 420,
+    "wires": [
+      [
+        "e6dae46b.192518"
+      ]
+    ]
+  },
+  {
+    "id": "68c89a42.973764",
+    "type": "debug",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "active": true,
+    "console": "false",
+    "complete": "false",
+    "x": 789,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "6bb10d54.944ef4",
+    "type": "delay",
+    "z": "e95a1c51.16a5e",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "10",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 168,
+    "y": 296,
+    "wires": [
+      [
+        "c40faee0.3bf05"
+      ]
+    ]
+  }
+]
