@@ -174,7 +174,7 @@
     "type": "file in",
     "z": "cc835082.337cb",
     "name": "",
-    "filename": "/boot/video_config.json",
+    "filename": "/mnt/media/video_config.json",
     "format": "utf8",
     "x": 262.5,
     "y": 260,
