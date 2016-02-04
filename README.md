@@ -5,7 +5,7 @@
 Video files should be located on a usb flash drive with a label of "VIDEO".
 
 ## Playlist mode
-To read a playlist of videos, the video_config.json file in /boot should look like this:
+To read a playlist of videos, the video_config.json file on your USB flash drive should look like this:
 
 ```json
 {
@@ -18,7 +18,7 @@ Where playlist is the list of video files you want to play.
 
 ## Button mode
 
-If you want to trigger the video files using buttons connected to the GPIO pins, the video_config.json file in /boot should look like this:
+If you want to trigger the video files using buttons connected to the GPIO pins, the video_config.json file on your USB flash drive should look like this:
 
 ```json
 {
